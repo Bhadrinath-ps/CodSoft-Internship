@@ -1,0 +1,52 @@
+/* Dark mode */
+
+.dark-mode {
+    --background-color: #090909;
+    --text-color: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --link-color: #6ac4e8;
+    --link-hover-color: #8fd7ff;
+}
+
+header {
+    background-color: var(--background-color);
+    color: var(--text-color) !important;
+}
+
+header a {
+    color: var(--link-color) !important;
+}
+
+header a:hover {
+    color: var(--link-hover-color) !important;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+p,
+i {
+    color: var(--text-color);
+}
+
+i:hover {
+    color: #4c2de8d3;
+}
+
+footer {
+    background-color: var(--background-color);
+}
+
+footer p {
+    color: var(--text-color);
+}

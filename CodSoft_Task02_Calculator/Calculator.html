@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="assets/Calculator.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <!-- Toggle Switch Section -->
+
+    <section>
+        <div class="mode-switch">
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span>Scientific Mode</span>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+
+    <section>
+        <div class="calculator" id="calculator">
+            <div class="display">
+                <input type="text" id="result" placeholder="Calculator" disabled>
+            </div>
+            <div class="buttons">
+                <button class="digit">1</button>
+                <button class="digit">2</button>
+                <button class="digit">3</button>
+                <button class="operator">+</button>
+                <button class="digit">4</button>
+                <button class="digit">5</button>
+                <button class="digit">6</button>
+                <button class="operator">-</button>
+                <button class="digit">7</button>
+                <button class="digit">8</button>
+                <button class="digit">9</button>
+                <button class="operator">*</button>
+                <button class="decimal">.</button>
+                <button class="digit">0</button>
+                <button class="clear" id="clear">C</button>
+                <button class="operator">/</button>
+            </div>
+            <div class="Scientific">
+                <button class="function">√</button>
+                <button class="function">^</button>
+                <button class="function">sin</button>
+                <button class="function">cos</button>
+                <button class="function">tan</button>
+            </div>
+
+            <div class="equal" id="equal">=</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

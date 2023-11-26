@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets/Background.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* Toggle Switch Section */
+
+.mode-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mode-switch span {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.mode-switch span:hover {
+    color: #ccccccef;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Calculator Section */
+
+.calculator {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.177);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(124, 102, 102, 0.5);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#result {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    background-color: rgba(135, 135, 135, 0.5);
+}
+
+#result::placeholder {
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #d5d5d5f9;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.digit {
+    background-color: #f0f0f0;
+}
+
+.operator {
+    background-color: #f5a623;
+    color: #fff;
+}
+
+.Scientific {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.function {
+    margin: 15px 0px -5px 0px;
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.function:hover {
+    background-color: #738694;
+    transform: scale(1.05);
+}
+
+#clear {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.equal {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.equal:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+.decimal {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.scientific-mode {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-size: 120%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 160%;
+    }
+}

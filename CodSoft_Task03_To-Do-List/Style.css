@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(46, 2, 2, 0.50), rgba(34, 2, 15, 0.500)), url("assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* To-Do List Section */
+
+.container {
+    min-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-image: url("assets/Background.png");
+    background-size: cover;
+    box-shadow: 0 5px 10px rgba(16, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+
+h1 {
+    color: #d4d3d3;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 15px rgba(16, 0, 0, 0.500);
+    transition: color 0.4s;
+}
+
+h1:hover {
+    color: #fff;
+}
+
+#task-form {
+    margin: 20px auto;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 9.5px 20px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056a9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    color: #ffffff;
+}
+
+.edit-button {
+    box-sizing: border-box;
+    background-color: #33adff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #0074d9;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.delete-button {
+    box-sizing: border-box;
+    background-color: #fa5047d9;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #ff0d00;
+}
+
+.edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 37.5px;
+}
+
+.fa-edit,
+.fa-trash-alt {
+    font-size: 12px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #888;
+    transition: all 0.2s;
+    cursor: pointer;
+}
